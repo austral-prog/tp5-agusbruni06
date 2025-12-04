@@ -5,5 +5,5 @@ def number_to_month(month):
     else:
         return "error"
 
-ingreso = int(input("Ingrese un número del 1 al 12: "))
-print(number_to_month(ingreso))
+#ingreso = int(input("Ingrese un número del 1 al 12: "))
+#print(number_to_month(ingreso))
