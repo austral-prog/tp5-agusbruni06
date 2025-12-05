@@ -19,26 +19,36 @@ def roots(a, b, c):
     #result = f"({r1}, {r2})"
     #return result
 
-A = int(input("ingrese parametro a: "))
-B = int(input("ingrese parametro b: "))
-C = int(input("ingrese parametro c: "))
-print(roots(A, B, C))
+#A = int(input("ingrese parametro a: "))
+#B = int(input("ingrese parametro b: "))
+#C = int(input("ingrese parametro c: "))
+#print(roots(A, B, C))
 
 
 def value_y(a, b, c, x):
     valory = a*x**2 + b*x + c
     return valory
 
-ejex = int(input("ingrese valor de x: "))
-print(value_y(A, B, C, ejex))
+#ejex = int(input("ingrese valor de x: "))
+#print(value_y(A, B, C, ejex))
 
 def to_string(a, b, c):
-    ecuacion1 = f"f(x) = {a}X^2 + {b}X + {c}"
-    return ecuacion1
-print(to_string(A, B, C))
-
+    if a == 0 and b == 0:
+        return f"f(x) = {c}"
+    elif a == 0:
+        return f"f(x) = {b} * X + {c}"
+    elif b == 0:
+        return f"f(x) = {a} * X^2 + {c}" 
+    else:
+        return f"f(x) = {a} * X^2 + {b} * X + {c}"
 
 def derivation(a, b, c):
-    ecuacion2 = f"f'(x) = {2*a}x + {b} + {c*0}"
-    return ecuacion2
-print(derivation(A, B, C))
+    if a == 0 and b == 0:
+        return "f'(x) = 0"
+    elif a == 0:
+        return f"f'(x) = {b}"
+    elif b == 0:
+        return f"f'(x) = {2*a} * X"
+    else:
+        return f"f'(x) = {2*a} * X + {b}"
+
